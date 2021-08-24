@@ -1,0 +1,218 @@
+/* Variables start */
+:root{
+    --textColor: #8B8B8B;
+    --textActiveColor: #1A1A18;
+    --textColor2: #2B2B2B;
+    --redColor: #DC5B51;
+    --redColor2: #DD2A1B;
+}
+
+/* Media styles start */
+@media (max-width: 1000px) {
+    .settings__filter{
+        display: block!important;
+    }
+    .categories-detail__filter{
+        display: none;
+    }
+    .categories-detail__goods{
+        max-width: 100%!important;
+    }
+}
+@media (max-width: 520px) {
+    .filter-dropdown{
+        left: 0;
+    }
+}
+@media (max-width: 339px) {
+    .filter-dropdown{
+        width: 250px!important;
+    }
+    .sort-dropdown{
+        left: 0;
+        width: 100%;
+    }
+}
+/* Media styles end */
+
+
+/* Main start */
+
+/* Custom checkbox styles start */
+/* The list__check */
+.list__check {
+    display: block;
+    position: relative;
+    padding-left: 60px;
+    padding-top: 7px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 14px;
+    color: #000;
+    font-weight: 700;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .list__check input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .list__check:hover input ~ .checkmark {
+    background-color: #FFFFFF;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .list__check input:checked ~ .checkmark {
+    background-color: #FFFFFF;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .list__check input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .list__check .checkmark:after {
+    left: 11px;
+    top: 7px;
+    width: 5px;
+    height: 10px;
+    border: solid #000;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+/* Custom checkbox styles end */
+
+/* Categories-detail start */
+
+.categories-detail{
+    padding-bottom: 50px;
+}
+
+.categories-detail__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.categories-detail__settings{
+    display: flex;
+    column-gap: 60px;
+    row-gap: 20px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+.settings__filter > .filter__list, .settings__sort > .sort__list{
+    padding: 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.1);
+}
+
+.sort__list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.sort__list > li{
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    color: var(--textColor2);
+}
+.settings__filter, .settings__sort{
+    position: relative;
+}
+.settings__filter{
+    display: none;
+}
+.arrow-down{
+    transition: .3s;
+}
+.arrow-down.active{
+    transform: rotateZ(180deg);
+}
+.sort-dropdown{
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 200px;
+    z-index: 5;
+}
+.filter-dropdown{
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 300px;
+    z-index: 10;
+}
+
+.filter__button,
+.sort__button{
+    cursor: pointer;
+}
+.filter__text, .sort__text{
+    font-size: 14px;
+    font-weight: 700;
+    color: #8b8b88;
+    margin-right: 30px;
+}
+
+.categories-detail__content{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 100px;
+}
+
+.categories-detail__filter{
+    max-width: 30%;
+}
+
+.filter__list{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.categories-detail__goods{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    row-gap: 40px;
+    column-gap: 30px;
+    max-width: 70%;
+}
+
+/* Categories-detail end */
+
+/* Main end */

@@ -1,7 +1,17 @@
 $(".header__menu-adaptive").css('display', 'none')
+$(".filter-dropdown").css('display', 'none')
+$(".sort-dropdown").css('display', 'none')
 $(".burger").click(function(){
     $(".header__menu-adaptive").slideToggle("slow");
 });
+$(".filter__button").click(function() {
+    $(".filter-dropdown").slideToggle("slow");
+})
+$(".sort__button").click(function() {
+  $(".sort-dropdown").slideToggle("slow");
+  $(".arrow-down").toggleClass("active");
+})
+
 
 $('.slider').slick({
     infinite: false,
