@@ -1,0 +1,65 @@
+/* Variables start */
+:root{
+    --textColor: #8B8B8B;
+    --textActiveColor: #1A1A18;
+    --textColor2: #2B2B2B;
+    --redColor: #DC5B51;
+    --redColor2: #DD2A1B;
+}
+
+/* Media styles start */
+
+@media (max-width: 1200px) {
+    .card{
+        max-width: 100vw!important;
+        width: 48%;
+    }
+    .card > .card__img{
+        width: 100%!important;
+    }
+}
+
+@media (max-width: 768px) {
+    .card{
+        width: 100%!important;
+    }
+}
+
+/* Media styles end */
+
+/* Main start */
+
+/* Categories-goods start */
+
+.categories-goods{
+    padding-bottom: 50px;
+}
+.categories-goods__content{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 40px;
+    column-gap: 30px;
+    flex-wrap: wrap;
+}
+.card{
+    max-width: 370px;
+}
+.card > .card__img{
+    width: 370px;
+    height: 170px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin-bottom: 30px;
+}
+.card > .card__title{
+    display: inline-block;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--textColor2);
+}
+
+/* Categories-goods end */
+
+/* Main end */
