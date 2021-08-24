@@ -1,0 +1,136 @@
+/* Слайдер */
+.slick-slider{
+	min-width: 0;
+}
+/* Ограничивающая оболочка */
+.slick-list {
+	overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track{
+	display: flex;
+	align-items: flex-start;
+}
+
+/* Слайд */
+.slick-slide{
+	padding: 0!important;
+    margin: 0 13px !important;
+}
+/* Слайд активный */
+.slick-slide.slick-active{}
+/* Слайд основной */
+.slick-slide.slick-current{}
+/* Слайд по центру */
+.slick-slide.slick-center{}
+
+/* Стрелка */
+.slick-arrow{}
+/* Стрелка влево */
+.slick-arrow.slick-prev{}
+/* Стрелка вправо */
+.slick-arrow.slick-next{}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{}
+
+/* Точки */
+.slick-dots{}
+.slick-dots li{}
+.slick-dots button{}
+
+/* Конкретный слайдер */
+.detail-slider {
+	position: relative;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    max-width: 570px;
+}
+
+@media (max-width:767px){
+	.detail-slider {
+		padding: 0px 40px;
+	}
+}
+
+.detail-slider .slick-arrow{
+	position: absolute;
+	top: 55%;
+	margin: -30px 0px 0px 0px;
+	z-index: 10;
+	font-size: 0;
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	border: 1.5px solid #DC5B51!important;
+	outline: none;
+    cursor: pointer;
+	z-index: 10;
+}
+.detail-slider .slick-arrow.slick-prev{
+	left: 30px;
+	background: url('../img/arrow-red.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    transform: rotateZ(180deg);
+
+}
+.detail-slider .slick-arrow.slick-next{
+	right: 30px;
+	background: url('../img/arrow-red.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+	
+}
+.detail-slider .slick-arrow.slick-disabled{
+	opacity: 0.2;
+}
+
+.detail-slider .slick-dots{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.detail-slider .slick-dots li{
+	list-style: none;
+	margin: 0px 10px;
+}
+.detail-slider .slick-dots button{
+	font-size: 0;
+	width: 10px;
+	height: 10px;
+	background-color: #fff;
+	border-radius: 50%;
+}
+
+.detail-slider .slick-dots li.slick-active button{
+	background-color: transparent;
+	border: 1px solid #fff;
+}
+
+.slider-item {
+	padding: 0px 15px;
+    text-align: center;
+}
+.slider-item img{
+	max-width: 100%;
+    height: 300px;
+}
+.slider-item.slick-center{
+	
+}
+
+@media (max-width: 320px) {
+    .detail-slider .slick-arrow{
+		top: 120%;
+	}
+}
+
+@media (max-width: 480px) {
+	.detail-slider .slick-arrow.slick-prev{
+		left: 5px;
+	}
+	.detail-slider .slick-arrow.slick-next{
+		right: 5px;
+	}
+}

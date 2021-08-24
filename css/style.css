@@ -61,6 +61,25 @@ a{
     }
 }
 /* Container adaptive styles end */
+
+.main-btn{
+    background: var(--redColor);
+    border-radius: 5px;
+    padding: 9px 42px;
+    max-width: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    color: #FFFFFF;
+    transition: .3s;
+}
+.main-btn:hover{
+    background: var(--redColor2);
+}
+
 /* Null styles end */
 
 /* Media styles start */
